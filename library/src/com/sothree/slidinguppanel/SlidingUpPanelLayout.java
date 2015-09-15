@@ -966,7 +966,7 @@ public class SlidingUpPanelLayout extends ViewGroup {
             if (dy * (mIsSlidingUp ? 1 : -1) > 0) { // Collapsing
                 // Is the child less than fully scrolled?
                 // Then let the child handle it.
-                if (getScrollableViewScrollPosition() > 0) {
+                if (getScrollableViewScrollPosition() != 0) {
                     mIsScrollableViewHandlingTouch = true;
                     return super.dispatchTouchEvent(ev);
                 }
